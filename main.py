@@ -24,13 +24,14 @@ def spot_painting_generator(painting_size):
     gap_between_dots = size_of_dots * 3
     coordinate = -20 * painting_size
 
-    my_turtle.goto(coordinate, coordinate)
+    my_turtle.goto(coordinate, coordinate) #starting point
 
     for i in range(painting_size):
         for j in range(painting_size):
             my_turtle.dot(size_of_dots, random_color_generator())
             my_turtle.forward(gap_between_dots)
 
+				#to start from a new line after each loop
         my_turtle.goto(coordinate, (my_turtle.ycor() + gap_between_dots))
 
 
